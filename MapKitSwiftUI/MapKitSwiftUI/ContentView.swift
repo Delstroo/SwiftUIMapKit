@@ -119,7 +119,7 @@ struct MapView: UIViewRepresentable {
     class MapViewCoordinator: NSObject, MKMapViewDelegate {
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
             let renderer = MKPolylineRenderer(overlay: overlay)
-            renderer.strokeColor = .orange
+            renderer.strokeColor = .orange.withAlphaComponent(0.50)
             renderer.lineWidth = 3
             
             return renderer
